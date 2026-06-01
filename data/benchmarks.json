@@ -1,0 +1,86 @@
+[
+  {
+    "Benchmark Code": "BMK-CUSTOM-BLEND",
+    "Name (EN)": "Beit Al-Anbari Custom Blended Benchmark",
+    "Use Case (EN)": "Total portfolio benchmark constructed from IPS strategic allocation weights",
+    "12m Return %": 0.078,
+    "3y Annualized %": 0.072,
+    "Currency": "USD",
+    "Source (EN)": "Internal construction",
+    "As Of Date": "2026-06-01",
+    "Notes (EN)": "Re-weighted annually at IPS review"
+  },
+  {
+    "Benchmark Code": "BMK-SP-GCC-SH",
+    "Name (EN)": "S&P GCC Composite Shariah Index",
+    "Use Case (EN)": "GCC Shariah-compliant equities",
+    "12m Return %": 0.084,
+    "3y Annualized %": 0.092,
+    "Currency": "USD",
+    "Source (EN)": "S&P Dow Jones Indices",
+    "As Of Date": "2026-06-01"
+  },
+  {
+    "Benchmark Code": "BMK-MSCI-WLD-IS",
+    "Name (EN)": "MSCI World Islamic Index",
+    "Use Case (EN)": "Global Shariah equities",
+    "12m Return %": 0.142,
+    "3y Annualized %": 0.108,
+    "Currency": "USD",
+    "Source (EN)": "MSCI",
+    "As Of Date": "2026-06-01"
+  },
+  {
+    "Benchmark Code": "BMK-FTSE-SUKUK",
+    "Name (EN)": "FTSE IdealRatings Global Sukuk Index",
+    "Use Case (EN)": "Global sukuk",
+    "12m Return %": 0.045,
+    "3y Annualized %": 0.036,
+    "Currency": "USD",
+    "Source (EN)": "FTSE Russell",
+    "As Of Date": "2026-06-01"
+  },
+  {
+    "Benchmark Code": "BMK-CA-PE",
+    "Name (EN)": "Cambridge Associates PE Index",
+    "Use Case (EN)": "Private equity (LP)",
+    "12m Return %": 0.118,
+    "3y Annualized %": 0.135,
+    "Currency": "USD",
+    "Source (EN)": "Cambridge Associates",
+    "As Of Date": "2026-06-01",
+    "Notes (EN)": "Net of fees, 1-quarter lag"
+  },
+  {
+    "Benchmark Code": "BMK-CA-VC",
+    "Name (EN)": "Cambridge Associates VC Index",
+    "Use Case (EN)": "Venture capital (LP)",
+    "12m Return %": -0.018,
+    "3y Annualized %": 0.052,
+    "Currency": "USD",
+    "Source (EN)": "Cambridge Associates",
+    "As Of Date": "2026-06-01",
+    "Notes (EN)": "Net of fees, 1-quarter lag"
+  },
+  {
+    "Benchmark Code": "BMK-MSCI-UAE-RE",
+    "Name (EN)": "MSCI UAE Real Estate Index",
+    "Use Case (EN)": "Regional real estate proxy",
+    "12m Return %": 0.068,
+    "3y Annualized %": 0.062,
+    "Currency": "USD",
+    "Source (EN)": "MSCI",
+    "As Of Date": "2026-06-01"
+  },
+  {
+    "Benchmark Code": "BMK-USD-3M",
+    "Name (EN)": "USD 3-Month T-Bill Equivalent",
+    "Use Case (EN)": "Cash benchmark (proxy)",
+    "12m Return %": 0.045,
+    "3y Annualized %": 0.036,
+    "Currency": "USD",
+    "Source (EN)": "US Treasury",
+    "As Of Date": "2026-06-01",
+    "Notes (EN)": "Used as benchmark proxy; cash sleeve actually held in Shariah-compliant instruments"
+  }
+]

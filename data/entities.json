@@ -1,0 +1,92 @@
+[
+  {
+    "Entity ID": "ENT-001",
+    "Entity Name (EN)": "Al-Anbari Family Foundation",
+    "Jurisdiction (EN)": "DIFC, UAE",
+    "Entity Type": "Foundation",
+    "Parent Entity ID": null,
+    "Purpose (EN)": "Apex governance and beneficial ownership vehicle for the family.",
+    "Ownership Description (EN)": "Held for the benefit of the Al-Anbari family branches per the Foundation Charter."
+  },
+  {
+    "Entity ID": "ENT-002",
+    "Entity Name (EN)": "Beit Al-Anbari Holdings Limited",
+    "Jurisdiction (EN)": "BVI",
+    "Entity Type": "Holdco",
+    "Parent Entity ID": "ENT-001",
+    "Purpose (EN)": "Master holding company for all operating and investment subsidiaries.",
+    "Ownership Description (EN)": "100% owned by ENT-001"
+  },
+  {
+    "Entity ID": "ENT-003",
+    "Entity Name (EN)": "Anbari Capital SPV-1",
+    "Jurisdiction (EN)": "DIFC, UAE",
+    "Entity Type": "SPV",
+    "Parent Entity ID": "ENT-002",
+    "Purpose (EN)": "Public markets and liquid Shariah-compliant alternatives.",
+    "Ownership Description (EN)": "100% owned by ENT-002"
+  },
+  {
+    "Entity ID": "ENT-004",
+    "Entity Name (EN)": "Anbari Capital SPV-2",
+    "Jurisdiction (EN)": "Cayman Islands",
+    "Entity Type": "SPV",
+    "Parent Entity ID": "ENT-002",
+    "Purpose (EN)": "Private equity and venture LP positions, plus direct co-investments.",
+    "Ownership Description (EN)": "100% owned by ENT-002"
+  },
+  {
+    "Entity ID": "ENT-005",
+    "Entity Name (EN)": "Anbari Real Estate Holdings",
+    "Jurisdiction (EN)": "DIFC, UAE",
+    "Entity Type": "SPV",
+    "Parent Entity ID": "ENT-002",
+    "Purpose (EN)": "Direct property holdings, both income-producing and family-use.",
+    "Ownership Description (EN)": "100% owned by ENT-002"
+  },
+  {
+    "Entity ID": "ENT-006",
+    "Entity Name (EN)": "Sahaa Pharmacy Group LLC",
+    "Jurisdiction (EN)": "Riyadh, Saudi Arabia",
+    "Entity Type": "Operating Co.",
+    "Parent Entity ID": "ENT-002",
+    "Purpose (EN)": "Operator of the Sahaa pharmacy retail chain across KSA.",
+    "Ownership Description (EN)": "92% owned by ENT-002; 8% management equity"
+  },
+  {
+    "Entity ID": "ENT-007",
+    "Entity Name (EN)": "Hawra Hospitality Company",
+    "Jurisdiction (EN)": "Jeddah, Saudi Arabia",
+    "Entity Type": "Operating Co.",
+    "Parent Entity ID": "ENT-002",
+    "Purpose (EN)": "Operator of premium hotels in Makkah, Madinah, and Jeddah.",
+    "Ownership Description (EN)": "100% owned by ENT-002"
+  },
+  {
+    "Entity ID": "ENT-008",
+    "Entity Name (EN)": "Mosaic Mall Holdings",
+    "Jurisdiction (EN)": "Jeddah, Saudi Arabia",
+    "Entity Type": "Operating Co.",
+    "Parent Entity ID": "ENT-002",
+    "Purpose (EN)": "Owner-operator of two regional shopping malls in the Western Province.",
+    "Ownership Description (EN)": "75% owned by ENT-002; 25% co-investor partner"
+  },
+  {
+    "Entity ID": "ENT-009",
+    "Entity Name (EN)": "Anbari Treasury Limited",
+    "Jurisdiction (EN)": "DIFC, UAE",
+    "Entity Type": "Treasury",
+    "Parent Entity ID": "ENT-002",
+    "Purpose (EN)": "Cash, Shariah-compliant money market funds, and sukuk treasury operations.",
+    "Ownership Description (EN)": "100% owned by ENT-002"
+  },
+  {
+    "Entity ID": "ENT-010",
+    "Entity Name (EN)": "Anbari Riyadh Capital",
+    "Jurisdiction (EN)": "Riyadh, Saudi Arabia",
+    "Entity Type": "SPV",
+    "Parent Entity ID": "ENT-002",
+    "Purpose (EN)": "Saudi-domiciled SPV for KSA-restricted investments and Saudization-relevant deployments.",
+    "Ownership Description (EN)": "100% owned by ENT-002"
+  }
+]

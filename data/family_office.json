@@ -1,0 +1,26 @@
+{
+  "Family Office ID": "FO-001",
+  "Name (EN)": "Beit Al-Anbari Family Office",
+  "Short Name": "Beit Al-Anbari",
+  "Headquarters (EN)": "Jeddah, Saudi Arabia",
+  "Founded": "1972 (trading); 1994 (formal SFO)",
+  "Generation": "Third generation",
+  "Family Description (EN)": "Third-generation Jeddah merchant family. Originated in trading and light industry; transitioned over the last two decades to a multi-asset investment platform with three self-operated portfolio companies and a wide private and public markets book. Identity is grounded in long-term, fully Shariah-compliant stewardship of family capital.",
+  "Total AUM (USD m)": 2171,
+  "Liquid AUM (USD m)": 1156,
+  "Operating Co AUM (USD m)": 1015,
+  "Reporting Currency": "USD",
+  "Operating Currencies": [
+    "USD",
+    "SAR"
+  ],
+  "Shariah Policy": "Full portfolio",
+  "Shariah Standard": "AAOIFI",
+  "Primary Benchmark": "BMK-CUSTOM-BLEND",
+  "Target Real Return": "6-8% p.a. over rolling 5-year periods, net of fees",
+  "Strategic Posture (EN)": "Transitioning from active operator to financial investor while retaining strategic core operating companies. Increasing weight to private market funds and direct co-investments alongside trusted regional and global GPs.",
+  "Investment Committee Size": 5,
+  "IC Composition (EN)": "Principal (Chair), CIO, one independent advisor, two family members",
+  "Foundation Apex Entity": "ENT-001",
+  "As Of Date": "2026-06-01"
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "Person ID": "PRS-001",
+    "Full Name (EN)": "Faisal Bin Hamad Al-Anbari",
+    "Role (EN)": "Principal & Foundation Chair",
+    "Generation": "G3",
+    "Type": "Family",
+    "Email": "faisal@beit-al-anbari.example",
+    "Phone": "+966500001001",
+    "Notes (EN)": "Third-generation family head. Active in governance, less involved in day-to-day investment decisions."
+  },
+  {
+    "Person ID": "PRS-002",
+    "Full Name (EN)": "Hala Al-Anbari",
+    "Role (EN)": "Foundation Council Member",
+    "Generation": "G3",
+    "Type": "Family",
+    "Email": "hala@beit-al-anbari.example",
+    "Phone": "+966500001002",
+    "Notes (EN)": "Sister of the Principal. Focus on philanthropic activities and next-generation development."
+  },
+  {
+    "Person ID": "PRS-003",
+    "Full Name (EN)": "Yousef Al-Anbari",
+    "Role (EN)": "Foundation Council Member, IC Member",
+    "Generation": "G3",
+    "Type": "Family",
+    "Email": "yousef@beit-al-anbari.example",
+    "Phone": "+966500001003",
+    "Notes (EN)": "Cousin of the Principal. Holds the IC seat representing the second family branch."
+  },
+  {
+    "Person ID": "PRS-010",
+    "Full Name (EN)": "Reem Al-Bishri",
+    "Role (EN)": "Chief Investment Officer",
+    "Type": "Staff",
+    "Email": "reem.albishri@beit-al-anbari.example",
+    "Phone": "+966500001010",
+    "Tenure": "4 years",
+    "Background (EN)": "Ex-NCB Capital and SEDCO Capital; CFA charterholder; led multi-asset mandates before joining.",
+    "Notes (EN)": "Primary user of the agentic platform. Reports to the Principal."
+  },
+  {
+    "Person ID": "PRS-011",
+    "Full Name (EN)": "Tariq Al-Mansour",
+    "Role (EN)": "Investment Director — Public Markets & Liquid",
+    "Type": "Staff",
+    "Email": "tariq.almansour@beit-al-anbari.example",
+    "Phone": "+966500001011",
+    "Tenure": "6 years"
+  },
+  {
+    "Person ID": "PRS-012",
+    "Full Name (EN)": "Lara Khoury",
+    "Role (EN)": "Investment Director — Private Markets",
+    "Type": "Staff",
+    "Email": "lara.khoury@beit-al-anbari.example",
+    "Phone": "+966500001012",
+    "Tenure": "3 years"
+  },
+  {
+    "Person ID": "PRS-013",
+    "Full Name (EN)": "Adel Sayegh",
+    "Role (EN)": "Head of Operations & Reporting",
+    "Type": "Staff",
+    "Email": "adel.sayegh@beit-al-anbari.example",
+    "Phone": "+966500001013",
+    "Tenure": "8 years"
+  },
+  {
+    "Person ID": "PRS-020",
+    "Full Name (EN)": "Dr. Khaled Al-Shaibani",
+    "Role (EN)": "Independent IC Advisor",
+    "Type": "Independent",
+    "Email": "k.alshaibani@external.example",
+    "Notes (EN)": "Former senior CIO at a regional sovereign fund. Joined IC in 2021."
+  },
+  {
+    "Person ID": "PRS-021",
+    "Full Name (EN)": "Sheikh Abdulrahman Al-Sharif",
+    "Role (EN)": "Shariah Advisor",
+    "Type": "Advisor",
+    "Email": "advisor.shariah@external.example",
+    "Notes (EN)": "Independent AAOIFI-credentialed Shariah scholar. Annual portfolio review and ad hoc rulings."
+  },
+  {
+    "Person ID": "PRS-030",
+    "Full Name (EN)": "Bandar Al-Otaibi",
+    "Role (EN)": "CEO, Sahaa Pharmacy Group",
+    "Type": "Portfolio Co. Leadership",
+    "Linked Company ID": "OPCO-001",
+    "Tenure": "7 years"
+  },
+  {
+    "Person ID": "PRS-031",
+    "Full Name (EN)": "Mona Al-Fayez",
+    "Role (EN)": "CEO, Hawra Hospitality",
+    "Type": "Portfolio Co. Leadership",
+    "Linked Company ID": "OPCO-002",
+    "Tenure": "5 years"
+  },
+  {
+    "Person ID": "PRS-032",
+    "Full Name (EN)": "Omar Al-Jaber",
+    "Role (EN)": "CEO, Mosaic Mall Holdings",
+    "Type": "Portfolio Co. Leadership",
+    "Linked Company ID": "OPCO-003",
+    "Tenure": "9 years"
+  }
+]

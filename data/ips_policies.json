@@ -1,0 +1,200 @@
+[
+  {
+    "Policy ID": "IPS-001",
+    "Category": "Concentration",
+    "Description (EN)": "Maximum single position as % of Liquid AUM (excludes operating companies)",
+    "Limit Type": "Max %",
+    "Limit Value": 0.12,
+    "Applies To": "Liquid AUM (Single Position)",
+    "Watch Threshold": 0.1,
+    "Status": "Active"
+  },
+  {
+    "Policy ID": "IPS-002",
+    "Category": "Concentration",
+    "Description (EN)": "Maximum single external manager as % of total AUM",
+    "Limit Type": "Max %",
+    "Limit Value": 0.1,
+    "Applies To": "Total AUM (Single Manager)",
+    "Watch Threshold": 0.08,
+    "Status": "Active"
+  },
+  {
+    "Policy ID": "IPS-010",
+    "Category": "Liquidity",
+    "Description (EN)": "Minimum % of total AUM liquidatable within 30 days",
+    "Limit Type": "Min %",
+    "Limit Value": 0.15,
+    "Applies To": "Total AUM (30-day liquid)",
+    "Watch Threshold": 0.18,
+    "Status": "Active"
+  },
+  {
+    "Policy ID": "IPS-011",
+    "Category": "Liquidity",
+    "Description (EN)": "Minimum % of AUM in cash and money market at all times",
+    "Limit Type": "Min %",
+    "Limit Value": 0.02,
+    "Applies To": "Total AUM (Cash)",
+    "Watch Threshold": 0.025,
+    "Status": "Active"
+  },
+  {
+    "Policy ID": "IPS-020",
+    "Category": "Drawdown",
+    "Description (EN)": "Maximum peak-to-trough drawdown at total portfolio level",
+    "Limit Type": "Max %",
+    "Limit Value": 0.15,
+    "Applies To": "Total Portfolio (12m Trailing)",
+    "Watch Threshold": 0.1,
+    "Status": "Active"
+  },
+  {
+    "Policy ID": "IPS-030",
+    "Category": "Geographic",
+    "Description (EN)": "Maximum % of Liquid AUM in any single country",
+    "Limit Type": "Max %",
+    "Limit Value": 0.7,
+    "Applies To": "Liquid AUM (Single Country)",
+    "Notes (EN)": "Higher MENA tilt permitted given operating company concentration in KSA",
+    "Status": "Active"
+  },
+  {
+    "Policy ID": "IPS-040",
+    "Category": "Asset Allocation",
+    "Description (EN)": "Operating companies target range as % of total AUM",
+    "Limit Type": "Range",
+    "Limit Value": [
+      0.35,
+      0.5
+    ],
+    "Applies To": "Operating Companies",
+    "Status": "Active"
+  },
+  {
+    "Policy ID": "IPS-041",
+    "Category": "Asset Allocation",
+    "Description (EN)": "Private equity (LP + Direct) target range as % of total AUM",
+    "Limit Type": "Range",
+    "Limit Value": [
+      0.1,
+      0.25
+    ],
+    "Applies To": "Private Equity",
+    "Status": "Active"
+  },
+  {
+    "Policy ID": "IPS-042",
+    "Category": "Asset Allocation",
+    "Description (EN)": "Public equities target range as % of total AUM",
+    "Limit Type": "Range",
+    "Limit Value": [
+      0.1,
+      0.25
+    ],
+    "Applies To": "Public Equities",
+    "Status": "Active"
+  },
+  {
+    "Policy ID": "IPS-043",
+    "Category": "Asset Allocation",
+    "Description (EN)": "Sukuk / fixed income target range as % of total AUM",
+    "Limit Type": "Range",
+    "Limit Value": [
+      0.05,
+      0.2
+    ],
+    "Applies To": "Sukuk",
+    "Status": "Active"
+  },
+  {
+    "Policy ID": "IPS-044",
+    "Category": "Asset Allocation",
+    "Description (EN)": "Real estate target range as % of total AUM",
+    "Limit Type": "Range",
+    "Limit Value": [
+      0.05,
+      0.15
+    ],
+    "Applies To": "Real Estate",
+    "Status": "Active"
+  },
+  {
+    "Policy ID": "IPS-050",
+    "Category": "Exclusion",
+    "Description (EN)": "Hard exclusion categories — never invest",
+    "Limit Type": "Exclusion List",
+    "Limit Value": [
+      "conventional weapons",
+      "tobacco",
+      "gambling",
+      "adult entertainment",
+      "pork production and distribution",
+      "conventional banks (interest-bearing)",
+      "alcohol production and distribution",
+      "any entity on UN/OFAC/EU sanctions lists"
+    ],
+    "Applies To": "All Holdings",
+    "Status": "Active"
+  },
+  {
+    "Policy ID": "IPS-060",
+    "Category": "Shariah",
+    "Description (EN)": "All holdings must pass AAOIFI Shariah screening; rulings issued by the family's appointed Shariah advisor",
+    "Limit Type": "Categorical",
+    "Limit Value": "AAOIFI standard",
+    "Applies To": "All Holdings",
+    "Status": "Active"
+  },
+  {
+    "Policy ID": "IPS-061",
+    "Category": "Shariah",
+    "Description (EN)": "Annual purification of incidental impermissible income via Foundation charitable program",
+    "Limit Type": "Procedural",
+    "Limit Value": "Annual",
+    "Applies To": "All Holdings",
+    "Status": "Active"
+  },
+  {
+    "Policy ID": "IPS-070",
+    "Category": "Governance",
+    "Description (EN)": "Transactions up to USD 1m: CIO discretion within mandate",
+    "Limit Type": "Authority Threshold",
+    "Limit Value": 1.0,
+    "Applies To": "Single Transaction (USD m)",
+    "Status": "Active"
+  },
+  {
+    "Policy ID": "IPS-071",
+    "Category": "Governance",
+    "Description (EN)": "Transactions USD 1m-5m: CIO + CFO co-sign",
+    "Limit Type": "Authority Threshold",
+    "Limit Value": [
+      1.0,
+      5.0
+    ],
+    "Applies To": "Single Transaction (USD m)",
+    "Status": "Active"
+  },
+  {
+    "Policy ID": "IPS-072",
+    "Category": "Governance",
+    "Description (EN)": "Transactions USD 5m-25m: Full IC approval required",
+    "Limit Type": "Authority Threshold",
+    "Limit Value": [
+      5.0,
+      25.0
+    ],
+    "Applies To": "Single Transaction (USD m)",
+    "Status": "Active"
+  },
+  {
+    "Policy ID": "IPS-073",
+    "Category": "Governance",
+    "Description (EN)": "Transactions above USD 25m: IC + Foundation Council approval",
+    "Limit Type": "Authority Threshold",
+    "Limit Value": 25.0,
+    "Applies To": "Single Transaction (USD m)",
+    "Status": "Active"
+  }
+]
