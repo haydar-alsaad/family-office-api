@@ -43,7 +43,8 @@ held only by this service, never exposed to the agent or the portal.
 
 import json
 import os
-from datetime import datetime
+from contextlib import asynccontextmanager
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional, List
 
@@ -54,6 +55,15 @@ from pydantic import BaseModel, Field
 from supabase import Client, create_client
 
 load_dotenv()
+
+
+# ----------------------------------------------------------------------
+# Time helper
+# ----------------------------------------------------------------------
+def _now_iso() -> str:
+    """Current UTC time as an ISO 8601 string. Replaces deprecated datetime.utcnow()."""
+    return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+
 
 # ----------------------------------------------------------------------
 # Supabase client (server-side, service-role key)
@@ -67,25 +77,12 @@ if not SUPABASE_URL or not SUPABASE_SERVICE_ROLE_KEY:
 
 supabase: Optional[Client] = None
 if SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY:
-    supabase = create_client(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
-
-
-# ----------------------------------------------------------------------
-# App
-# ----------------------------------------------------------------------
-app = FastAPI(
-    title="Family Office Agent API",
-    description="Read + write surface for Mizan and Horizon agents.",
-    version="1.0.0",
-)
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=False,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+    try:
+        supabase = create_client(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
+        print(f"[INIT] Supabase client created for {SUPABASE_URL}")
+    except Exception as e:
+        print(f"[INIT] Failed to create Supabase client: {e}")
+        supabase = None
 
 
 # ----------------------------------------------------------------------
@@ -138,7 +135,17 @@ SEED_MAP = [
 
 
 def seed_if_empty():
-    if not supabase or not SEED_ON_BOOT:
+    """
+    Seed Supabase tables from /data JSON files if both:
+      - SEED_ON_BOOT=true
+      - The target table is empty (or doesn't exist yet — in which case we skip and log)
+    Tables that already have rows are left alone.
+    """
+    if not supabase:
+        print("[SEED] skipped — Supabase client not initialized")
+        return
+    if not SEED_ON_BOOT:
+        print("[SEED] skipped — SEED_ON_BOOT is false")
         return
 
     print("[SEED] Seeding pass starting...")
@@ -154,7 +161,8 @@ def seed_if_empty():
                 print(f"[SEED] skipping {table}: already has {existing.count} row(s)")
                 continue
         except Exception as e:
-            print(f"[SEED] error checking {table}: {e}")
+            # Most common cause: table doesn't exist yet (Lovable hasn't run DDL).
+            print(f"[SEED] cannot check {table} (likely doesn't exist yet): {e}")
             continue
 
         with open(path) as f:
@@ -176,9 +184,44 @@ def seed_if_empty():
     print("[SEED] Seeding pass complete.")
 
 
-@app.on_event("startup")
-def on_startup():
+# ----------------------------------------------------------------------
+# Lifespan (modern FastAPI startup/shutdown pattern; replaces @app.on_event)
+# ----------------------------------------------------------------------
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup
+    print("[STARTUP] family-office-agent-api booting...")
     seed_if_empty()
+    print("[STARTUP] ready")
+    yield
+    # Shutdown (nothing to clean up)
+    print("[SHUTDOWN] family-office-agent-api stopping")
+
+
+# ----------------------------------------------------------------------
+# App
+# ----------------------------------------------------------------------
+app = FastAPI(
+    title="Family Office Agent API",
+    description="Read + write surface for Mizan and Horizon agents.",
+    version="1.0.0",
+    lifespan=lifespan,
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+# ----------------------------------------------------------------------
+# Display helpers
+# ----------------------------------------------------------------------
+def _agent_display_name(actor: str) -> str:
+    return {"mizan": "Mizan", "horizon": "Horizon"}.get(actor, actor.title())
 
 
 # ======================================================================
@@ -216,15 +259,11 @@ def log_action(
             "target_table": target_table,
             "target_id": target_id,
             "payload": payload or {},
-            "created_at": datetime.utcnow().isoformat() + "Z",
+            "created_at": _now_iso(),
         }).execute()
     except Exception as e:
         # Activity log failure should not break the agent's action; log and move on.
         print(f"[agent_actions] log_action failed: {e}")
-
-
-def _agent_display_name(actor: str) -> str:
-    return {"mizan": "Mizan", "horizon": "Horizon"}.get(actor, actor.title())
 
 
 # ======================================================================
@@ -252,8 +291,6 @@ def health():
 
 # ======================================================================
 # GET endpoints (read-side)
-# Functional placeholders; behavioral descriptions to be tightened in Step 3
-# (agent_endpoint_spec.md), which is what gets pasted into Nebelus AI Studio.
 # ======================================================================
 
 @app.get("/family-office")
@@ -504,7 +541,7 @@ def create_insight(payload: InsightCreate):
         "linked_company_ids": payload.linked_company_ids or [],
         "chart_spec": payload.chart_spec,
         "tags": payload.tags or [],
-        "created_at": datetime.utcnow().isoformat() + "Z",
+        "created_at": _now_iso(),
     }
     try:
         r = supabase.table("insights").insert(row).execute()
@@ -512,7 +549,6 @@ def create_insight(payload: InsightCreate):
     except Exception as e:
         raise HTTPException(500, f"Insert failed: {e}")
 
-    # Log to agent_actions for the activity drawer
     agent_display = _agent_display_name(payload.source_agent)
     pinned_suffix = " and pinned it to the dashboard" if payload.pinned_to_dashboard else ""
     description = f"{agent_display} created insight: {payload.title}{pinned_suffix}"
@@ -556,7 +592,7 @@ def create_ic_item(payload: ICItemCreate):
         "linked_company_ids": payload.linked_company_ids or [],
         "linked_insight_id": payload.linked_insight_id,
         "status": "open",
-        "created_at": datetime.utcnow().isoformat() + "Z",
+        "created_at": _now_iso(),
     }
     try:
         r = supabase.table("ic_items").insert(row).execute()
@@ -609,7 +645,7 @@ def create_note(payload: NoteCreate):
         "attached_to_type": payload.attached_to_type,
         "attached_to_id": payload.attached_to_id,
         "tags": payload.tags or [],
-        "created_at": datetime.utcnow().isoformat() + "Z",
+        "created_at": _now_iso(),
     }
     try:
         r = supabase.table("notes").insert(row).execute()
@@ -662,12 +698,13 @@ def create_watchlist_item(payload: WatchlistItemCreate):
         "title": payload.title,
         "reason_md": payload.reason_md,
         "source_agent": payload.source_agent,
+        "source": payload.source_agent,  # mirror for portal query convenience
         "holding_id": payload.holding_id,
         "company_id": payload.company_id,
         "review_by": payload.review_by,
         "severity": payload.severity,
         "status": "active",
-        "created_at": datetime.utcnow().isoformat() + "Z",
+        "created_at": _now_iso(),
     }
     try:
         r = supabase.table("watchlist_items").insert(row).execute()
