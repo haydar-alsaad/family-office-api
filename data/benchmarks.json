@@ -7,7 +7,7 @@
     "3y Annualized %": 0.072,
     "Currency": "USD",
     "Source (EN)": "Internal construction",
-    "As Of Date": "2026-06-01",
+    "As Of Date": "2026-06-04",
     "Notes (EN)": "Re-weighted annually at IPS review"
   },
   {
@@ -18,7 +18,7 @@
     "3y Annualized %": 0.092,
     "Currency": "USD",
     "Source (EN)": "S&P Dow Jones Indices",
-    "As Of Date": "2026-06-01"
+    "As Of Date": "2026-06-04"
   },
   {
     "Benchmark Code": "BMK-MSCI-WLD-IS",
@@ -28,7 +28,7 @@
     "3y Annualized %": 0.108,
     "Currency": "USD",
     "Source (EN)": "MSCI",
-    "As Of Date": "2026-06-01"
+    "As Of Date": "2026-06-04"
   },
   {
     "Benchmark Code": "BMK-FTSE-SUKUK",
@@ -38,7 +38,7 @@
     "3y Annualized %": 0.036,
     "Currency": "USD",
     "Source (EN)": "FTSE Russell",
-    "As Of Date": "2026-06-01"
+    "As Of Date": "2026-06-04"
   },
   {
     "Benchmark Code": "BMK-CA-PE",
@@ -48,7 +48,7 @@
     "3y Annualized %": 0.135,
     "Currency": "USD",
     "Source (EN)": "Cambridge Associates",
-    "As Of Date": "2026-06-01",
+    "As Of Date": "2026-06-04",
     "Notes (EN)": "Net of fees, 1-quarter lag"
   },
   {
@@ -59,7 +59,7 @@
     "3y Annualized %": 0.052,
     "Currency": "USD",
     "Source (EN)": "Cambridge Associates",
-    "As Of Date": "2026-06-01",
+    "As Of Date": "2026-06-04",
     "Notes (EN)": "Net of fees, 1-quarter lag"
   },
   {
@@ -70,7 +70,7 @@
     "3y Annualized %": 0.062,
     "Currency": "USD",
     "Source (EN)": "MSCI",
-    "As Of Date": "2026-06-01"
+    "As Of Date": "2026-06-04"
   },
   {
     "Benchmark Code": "BMK-USD-3M",
@@ -80,7 +80,7 @@
     "3y Annualized %": 0.036,
     "Currency": "USD",
     "Source (EN)": "US Treasury",
-    "As Of Date": "2026-06-01",
+    "As Of Date": "2026-06-04",
     "Notes (EN)": "Used as benchmark proxy; cash sleeve actually held in Shariah-compliant instruments"
   }
 ]

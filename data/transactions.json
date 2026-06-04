@@ -1,7 +1,7 @@
 [
   {
     "Transaction ID": "TXN-001",
-    "Date": "2026-05-28",
+    "Date": "2026-05-31",
     "Type": "Capital Call",
     "Holding ID": "HLD-042",
     "Amount (USD m)": -2.5,
@@ -12,7 +12,7 @@
   },
   {
     "Transaction ID": "TXN-002",
-    "Date": "2026-05-22",
+    "Date": "2026-05-25",
     "Type": "Distribution",
     "Holding ID": "HLD-040",
     "Amount (USD m)": 1.8,
@@ -23,7 +23,7 @@
   },
   {
     "Transaction ID": "TXN-003",
-    "Date": "2026-05-19",
+    "Date": "2026-05-22",
     "Type": "Trade Buy",
     "Holding ID": "HLD-007",
     "Amount (USD m)": -4.5,
@@ -34,7 +34,7 @@
   },
   {
     "Transaction ID": "TXN-004",
-    "Date": "2026-05-15",
+    "Date": "2026-05-18",
     "Type": "Coupon Received",
     "Holding ID": "HLD-030",
     "Amount (USD m)": 0.32,
@@ -45,7 +45,7 @@
   },
   {
     "Transaction ID": "TXN-005",
-    "Date": "2026-05-12",
+    "Date": "2026-05-15",
     "Type": "Dividend Received",
     "Holding ID": "HLD-002",
     "Amount (USD m)": 1.4,
@@ -56,7 +56,7 @@
   },
   {
     "Transaction ID": "TXN-006",
-    "Date": "2026-05-08",
+    "Date": "2026-05-11",
     "Type": "Capital Call",
     "Holding ID": "HLD-041",
     "Amount (USD m)": -1.6,
@@ -67,7 +67,7 @@
   },
   {
     "Transaction ID": "TXN-007",
-    "Date": "2026-05-05",
+    "Date": "2026-05-08",
     "Type": "Trade Sell",
     "Holding ID": "HLD-006",
     "Amount (USD m)": 2.5,
@@ -78,7 +78,7 @@
   },
   {
     "Transaction ID": "TXN-008",
-    "Date": "2026-04-30",
+    "Date": "2026-05-03",
     "Type": "Dividend Received",
     "Holding ID": "HLD-004",
     "Amount (USD m)": 2.8,
@@ -89,7 +89,7 @@
   },
   {
     "Transaction ID": "TXN-009",
-    "Date": "2026-04-25",
+    "Date": "2026-04-28",
     "Type": "Coupon Received",
     "Holding ID": "HLD-033",
     "Amount (USD m)": 0.38,
@@ -100,7 +100,7 @@
   },
   {
     "Transaction ID": "TXN-010",
-    "Date": "2026-04-22",
+    "Date": "2026-04-25",
     "Type": "Distribution",
     "Holding ID": "HLD-046",
     "Amount (USD m)": 0.9,
@@ -111,7 +111,7 @@
   },
   {
     "Transaction ID": "TXN-011",
-    "Date": "2026-04-18",
+    "Date": "2026-04-21",
     "Type": "Trade Buy",
     "Holding ID": "HLD-005",
     "Amount (USD m)": -3.2,
@@ -122,7 +122,7 @@
   },
   {
     "Transaction ID": "TXN-012",
-    "Date": "2026-04-15",
+    "Date": "2026-04-18",
     "Type": "Capital Call",
     "Holding ID": "HLD-049",
     "Amount (USD m)": -1.2,
@@ -133,7 +133,7 @@
   },
   {
     "Transaction ID": "TXN-013",
-    "Date": "2026-04-10",
+    "Date": "2026-04-13",
     "Type": "Trade Sell",
     "Holding ID": "HLD-001",
     "Amount (USD m)": 6.8,
@@ -144,7 +144,7 @@
   },
   {
     "Transaction ID": "TXN-014",
-    "Date": "2026-04-08",
+    "Date": "2026-04-11",
     "Type": "Coupon Received",
     "Holding ID": "HLD-032",
     "Amount (USD m)": 0.42,
@@ -155,7 +155,7 @@
   },
   {
     "Transaction ID": "TXN-015",
-    "Date": "2026-04-02",
+    "Date": "2026-04-05",
     "Type": "Property Income",
     "Holding ID": "HLD-050",
     "Amount (USD m)": 0.28,
@@ -166,7 +166,7 @@
   },
   {
     "Transaction ID": "TXN-016",
-    "Date": "2026-03-28",
+    "Date": "2026-03-31",
     "Type": "Distribution",
     "Holding ID": "HLD-043",
     "Amount (USD m)": 2.2,
@@ -177,7 +177,7 @@
   },
   {
     "Transaction ID": "TXN-017",
-    "Date": "2026-03-25",
+    "Date": "2026-03-28",
     "Type": "Trade Buy",
     "Holding ID": "HLD-022",
     "Amount (USD m)": -2.0,
@@ -188,7 +188,7 @@
   },
   {
     "Transaction ID": "TXN-018",
-    "Date": "2026-03-20",
+    "Date": "2026-03-23",
     "Type": "Capital Call",
     "Holding ID": "HLD-048",
     "Amount (USD m)": -0.8,
@@ -199,7 +199,7 @@
   },
   {
     "Transaction ID": "TXN-019",
-    "Date": "2026-03-15",
+    "Date": "2026-03-18",
     "Type": "Property Income",
     "Holding ID": "HLD-051",
     "Amount (USD m)": 0.22,
@@ -210,7 +210,7 @@
   },
   {
     "Transaction ID": "TXN-020",
-    "Date": "2026-03-12",
+    "Date": "2026-03-15",
     "Type": "Trade Sell",
     "Holding ID": "HLD-021",
     "Amount (USD m)": 3.6,
@@ -221,7 +221,7 @@
   },
   {
     "Transaction ID": "TXN-021",
-    "Date": "2026-03-08",
+    "Date": "2026-03-11",
     "Type": "Coupon Received",
     "Holding ID": "HLD-031",
     "Amount (USD m)": 0.48,
@@ -232,7 +232,7 @@
   },
   {
     "Transaction ID": "TXN-022",
-    "Date": "2026-03-05",
+    "Date": "2026-03-08",
     "Type": "Capital Call",
     "Holding ID": "HLD-042",
     "Amount (USD m)": -3.0,
@@ -243,7 +243,7 @@
   },
   {
     "Transaction ID": "TXN-023",
-    "Date": "2026-06-02",
+    "Date": "2026-06-05",
     "Type": "Capital Call",
     "Holding ID": "HLD-040",
     "Amount (USD m)": -2.0,
@@ -254,7 +254,7 @@
   },
   {
     "Transaction ID": "TXN-024",
-    "Date": "2026-06-04",
+    "Date": "2026-06-07",
     "Type": "Coupon Received",
     "Holding ID": "HLD-035",
     "Amount (USD m)": 0.35,
@@ -265,7 +265,7 @@
   },
   {
     "Transaction ID": "TXN-025",
-    "Date": "2026-06-15",
+    "Date": "2026-06-18",
     "Type": "Capital Call",
     "Holding ID": "HLD-041",
     "Amount (USD m)": -1.8,
